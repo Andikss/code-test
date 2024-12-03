@@ -84,6 +84,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
           _active={{ bg: "#755C46" }}
           w="60px"
           h="30px"
+          color="white"
         >
           <MdChevronLeft size={32} />
         </Button>
@@ -95,6 +96,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
           _active={{ bg: "#755C46" }}
           w="60px"
           h="30px"
+          color="white"
         >
           <MdChevronRight size={32} />
         </Button>

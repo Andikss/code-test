@@ -47,6 +47,7 @@ export const ActionButtons = () => {
             _hover={{ bg: "#876A51" }}
             _active={{ bg: "#755C46" }}
             onClick={() => setMenuOpen(!isMenuOpen)}
+            color="white"
           >
             {isMenuOpen ? <RiCloseLine size={24} /> : <RiMenu3Line size={24} />}
           </IconButton>
@@ -59,6 +60,7 @@ export const ActionButtons = () => {
             _hover={{ bg: "#876A51" }}
             _active={{ bg: "#755C46" }}
             onClick={handleMuteToggle}
+            color="white"
           >
             {isMuted ? <RiMusicLine size={24} /> : <RiMusicFill size={24} />}
           </IconButton>
