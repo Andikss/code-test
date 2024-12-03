@@ -93,7 +93,14 @@ export const Menu: React.FC = () => {
 
           <Box position="absolute" bottom={8} right={8} textAlign="center">
             <Text fontSize="xs" color="gray.600">
-              Created with Love by Invitato
+              Created with Love by{" "}
+              <Link
+                href="https://andikads.cloud"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Andika Dwi Saputra
+              </Link>
             </Text>
             <Text fontSize="xs" color="gray.600">
               2024 Tiffany & Jared. All Rights Reserved
