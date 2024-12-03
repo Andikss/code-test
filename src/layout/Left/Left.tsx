@@ -14,8 +14,7 @@ export const Left = () => {
       bgRepeat="no-repeat"
       position="relative"
       style={{
-        backdropFilter: "blur(3px)",
-        borderRight: "5px solid rgba(128, 128, 128, 0.3)",
+        backdropFilter: "blur(10px)",
       }}
     >
       <Box
@@ -29,6 +28,7 @@ export const Left = () => {
         backgroundPosition="center"
         filter="brightness(0.6)"
         zIndex={0}
+        borderRight="8px solid rgba(128, 128, 128, 0.3)"
       />
 
       <Box position="relative" zIndex={2} h="100%" w="100%">
