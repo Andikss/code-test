@@ -15,7 +15,7 @@ const Home = () => {
         h="100vh"
         overflow="hidden"
         justifyContent="center"
-        bg="gray.500"
+        bg="gray.100"
         position="relative"
       >
         <Left />

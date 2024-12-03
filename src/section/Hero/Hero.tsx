@@ -71,9 +71,9 @@ export const Hero = () => {
         fontSize="xl"
         fontFamily="sans-serif"
         textTransform="uppercase"
+        width={{ base: "100vw", sm: "500px" }}
         letterSpacing={1}
         textAlign="center"
-        width="90%"
         zIndex={1}
         mt={"24"}
         mb={"48"}
@@ -87,6 +87,7 @@ export const Hero = () => {
         alignItems="center"
         justifyContent="center"
         zIndex={1}
+        width={{ base: "100vw", sm: "500px" }}
       >
         <Text
           textTransform="uppercase"
