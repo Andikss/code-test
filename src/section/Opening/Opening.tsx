@@ -1,6 +1,6 @@
 /** @format */
 
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Link, Text } from "@chakra-ui/react";
 import { Carousel, AOS } from "@/components/features";
 
 export const Opening = () => {
@@ -62,6 +62,22 @@ export const Opening = () => {
 
       <AOS delay={700}>
         <Carousel images={images} />
+      </AOS>
+
+      <AOS delay={900}>
+        <Text mt={8} textAlign="center" fontSize="sm" color="gray.600">
+          See my portfolio at{" "}
+          <Link
+            as="a"
+            href="https://andikads.cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="blue.500"
+            _hover={{ textDecoration: "underline" }}
+          >
+            andikads.cloud
+          </Link>
+        </Text>
       </AOS>
     </Box>
   );
