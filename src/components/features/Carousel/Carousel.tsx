@@ -4,6 +4,11 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Box, Image, Button, HStack } from "@chakra-ui/react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 interface CarouselProps {
   images: string[];
@@ -17,6 +22,8 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
     slidesToScroll: 1,
     containScroll: "trimSnaps",
   });
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [photoIndex, setPhotoIndex] = React.useState(0);
 
   React.useEffect(() => {
     if (!emblaApi) return;
@@ -43,6 +50,14 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <Box position="relative" h="540px">
+      <Lightbox
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        index={photoIndex}
+        slides={images.map((src) => ({ src }))}
+        plugins={[Zoom, Thumbnails]}
+      />
+
       <Box w="100%" maxW="900px" mx="auto" overflow="hidden" mb={4}>
         <Box ref={emblaRef} className="embla" mb={10}>
           <Box
@@ -60,6 +75,13 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
                 className={`embla__slide ${
                   index === selectedIndex ? "carousel_selected" : ""
                 }`}
+                onClick={() => {
+                  setPhotoIndex(index);
+                  setIsOpen(true);
+                }}
+                cursor="pointer"
+                transition="transform 0.2s"
+                _hover={{ transform: "scale(1.02)" }}
               >
                 <Image
                   src={image}
