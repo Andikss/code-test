@@ -31,7 +31,7 @@ export const Menu: React.FC = () => {
       onOpenChange={(details) => setMenuOpen(details.open)}
     >
       <DrawerBackdrop />
-      <DrawerContent>
+      <DrawerContent bg="white">
         <DrawerCloseTrigger position="absolute" top={4} right={4} />
 
         <Flex

@@ -43,7 +43,9 @@ export const ActionButtons = () => {
             aria-label="Open menu"
             rounded="full"
             size="lg"
-            colorScheme="gray"
+            bg="#997A5E"
+            _hover={{ bg: "#876A51" }}
+            _active={{ bg: "#755C46" }}
             onClick={() => setMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <RiCloseLine size={24} /> : <RiMenu3Line size={24} />}
@@ -53,7 +55,9 @@ export const ActionButtons = () => {
             aria-label="Toggle music"
             rounded="full"
             size="lg"
-            colorScheme="gray"
+            bg="#997A5E"
+            _hover={{ bg: "#876A51" }}
+            _active={{ bg: "#755C46" }}
             onClick={handleMuteToggle}
           >
             {isMuted ? <RiMusicLine size={24} /> : <RiMusicFill size={24} />}

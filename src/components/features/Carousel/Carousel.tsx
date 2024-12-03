@@ -42,7 +42,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   }, [emblaApi]);
 
   return (
-    <Box position="relative">
+    <Box position="relative" h="540px">
       <Box w="100%" maxW="900px" mx="auto" overflow="hidden" mb={4}>
         <Box ref={emblaRef} className="embla" mb={10}>
           <Box
@@ -75,25 +75,28 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
         </Box>
       </Box>
 
-      <HStack
-        gap={2}
-        justifyContent="end"
-      >
+      <HStack position="absolute" bottom="4" right="4" gap={2}>
         <Button
           onClick={scrollPrev}
-          size="sm"
-          colorScheme="blackAlpha"
-          rounded="full"
+          size="lg"
+          bg="#997A5E"
+          _hover={{ bg: "#876A51" }}
+          _active={{ bg: "#755C46" }}
+          w="60px"
+          h="30px"
         >
-          <MdChevronLeft size={20} />
+          <MdChevronLeft size={32} />
         </Button>
         <Button
           onClick={scrollNext}
-          size="sm"
-          colorScheme="blackAlpha"
-          rounded="full"
+          size="lg"
+          bg="#997A5E"
+          _hover={{ bg: "#876A51" }}
+          _active={{ bg: "#755C46" }}
+          w="60px"
+          h="30px"
         >
-          <MdChevronRight size={20} />
+          <MdChevronRight size={32} />
         </Button>
       </HStack>
     </Box>
