@@ -93,6 +93,7 @@ export const Hero = () => {
           fontSize="4xl"
           fontWeight={400}
           fontFamily="serif"
+          textAlign="center"
         >
           Tiffany & Jared
         </Text>

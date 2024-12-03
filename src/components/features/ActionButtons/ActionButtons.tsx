@@ -42,7 +42,7 @@ export const ActionButtons = () => {
           <IconButton
             aria-label="Open menu"
             rounded="full"
-            size="lg"
+            size="sm"
             bg="#997A5E"
             _hover={{ bg: "#876A51" }}
             _active={{ bg: "#755C46" }}
@@ -55,7 +55,7 @@ export const ActionButtons = () => {
           <IconButton
             aria-label="Toggle music"
             rounded="full"
-            size="lg"
+            size="sm"
             bg="#997A5E"
             _hover={{ bg: "#876A51" }}
             _active={{ bg: "#755C46" }}
